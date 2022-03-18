@@ -25,6 +25,10 @@ customer_orders as (
 
 ),
 
+WITH customer_amount AS (
+SELECT CUSTOMER_ID,SUM(AMOUNT) LIFETIME_VALUE FROM {{ ref('fct_orders') }} GROUP BY CUSTOMER_ID
+)
+
 final as (
 
     select
@@ -33,11 +37,13 @@ final as (
         customers.last_name,
         customer_orders.first_order_date,
         customer_orders.most_recent_order_date,
-        coalesce(customer_orders.number_of_orders, 0) as number_of_orders
+        coalesce(customer_orders.number_of_orders, 0) as number_of_orders,
+        coalesce(customer_orders.LIFETIME_VALUE, 0) as LIFETIME_VALUE
 
     from customers
 
     left join customer_orders using (customer_id)
+    left join customer_amount using (customer_id)
 
 )
 
