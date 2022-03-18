@@ -1,15 +1,30 @@
-with datos as (
-SELECT 
-B.ORDER_ID,
-A.CUSTOMER_ID,
-C.AMOUNT
-FROM {{ ref('stg_customers') }} A 
-LEFT JOIN {{ ref('stg_orders') }} B ON A.CUSTOMER_ID = B.CUSTOMER_ID
-LEFT JOIN {{ ref('stg_payments') }} C ON B.ORDER_ID = C.ORDER_ID
+with orders as  (
+    select * from {{ ref('stg_orders' )}}
+),
+
+payments as (
+    select * from {{ ref('stg_payments') }}
+),
+
+order_payments as (
+    select
+        order_id,
+        sum(case when status = 'success' then amount end) as amount
+
+    from payments
+    group by 1
+),
+
+final as (
+
+    select
+        orders.order_id,
+        orders.customer_id,
+        orders.order_date,
+        coalesce(order_payments.amount, 0) as amount
+
+    from orders
+    left join order_payments using (order_id)
 )
 
-SELECT 
-ORDER_ID,
-CUSTOMER_ID,
-AMOUNT
-FROM datos
+select * from final
