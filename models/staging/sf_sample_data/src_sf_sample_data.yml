@@ -5,13 +5,15 @@ sources:
     tables:
       - name: customer
         loaded_at_field: _etl_loaded_at
+      - name: defaultvalue
+        loaded_at_field: _etl_loaded_at
       - name: nation
+        loaded_at_field: _etl_loaded_at    
+      - name: part
+        loaded_at_field: _etl_loaded_at  
+      - name: partsupp
         loaded_at_field: _etl_loaded_at
-        - name: part
+      - name: region
         loaded_at_field: _etl_loaded_at
-        - name: partsupp
-        loaded_at_field: _etl_loaded_at
-        - name: region
-        loaded_at_field: _etl_loaded_at
-        - name: supplier
+      - name: supplier
         loaded_at_field: _etl_loaded_at
