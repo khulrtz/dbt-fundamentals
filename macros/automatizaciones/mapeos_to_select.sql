@@ -97,5 +97,12 @@ SELECT
     {%- endif -%}
     {{ campo }}
 {% endfor -%}
-FROM 
+
+    {%- set source_relation = adapter.get_relation(
+      database=db_origen,
+      schema=db_origen,
+      identifier=tb_origen_B) -%}
+
+FROM  {{ source_relation }}
+
 {%- endmacro -%}
