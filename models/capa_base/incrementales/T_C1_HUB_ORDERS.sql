@@ -1,1 +1,1 @@
-{{ mapeos_to_select('dbtfundamentals','STG_CALCULADO','dbtfundamentals','T_C1_HUB_ORDERS') }}
+{{ mapeos_to_select('dbtfundamentals','STG_ORDERS','dbtfundamentals','T_C1_HUB_ORDERS') }}
