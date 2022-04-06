@@ -38,9 +38,6 @@ models:
         +materialized: table
         +file_format: delta
         +post-hook: "OPTIMIZE {{ this }}"
-      metadata:
-        +materialized: view
-        +file_format: delta    
     marts:
       +materialized: table
 
