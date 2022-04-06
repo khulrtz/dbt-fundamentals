@@ -1,0 +1,1 @@
+{{ mapeos_to_select('ingestas','PARTSUPP','dbtfundamentals','T_C1_LIK_PARTSUPP') }}

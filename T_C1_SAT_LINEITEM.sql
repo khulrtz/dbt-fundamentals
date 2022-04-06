@@ -1,0 +1,1 @@
+{{ mapeos_to_select('ingestas','LINEITEM','dbtfundamentals','T_C1_SAT_LINEITEM') }}
