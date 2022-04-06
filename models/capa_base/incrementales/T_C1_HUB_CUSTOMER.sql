@@ -1,0 +1,1 @@
+{{ mapeos_to_select('dbtfundamentals','STG_CUSTOMER','dbtfundamentals','T_C1_HUB_CUSTOMER') }}
