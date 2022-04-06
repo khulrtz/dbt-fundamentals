@@ -1,0 +1,1 @@
+{{ mapeos_to_select('ingestas','PART','dbtfundamentals','T_C1_SAT_PART') }}
