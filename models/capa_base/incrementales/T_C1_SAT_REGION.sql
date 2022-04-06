@@ -1,1 +1,1 @@
-{{ mapeos_to_select('dbtfundamentals','STG_CALCULADO','dbtfundamentals','T_C1_SAT_REGION') }}
+{{ mapeos_to_select('dbtfundamentals','STG_REGION','dbtfundamentals','T_C1_SAT_REGION') }}
