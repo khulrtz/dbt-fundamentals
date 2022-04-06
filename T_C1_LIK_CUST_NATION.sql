@@ -1,0 +1,1 @@
+{{ mapeos_to_select('ingestas','CUSTOMER','dbtfundamentals','T_C1_LIK_CUST_NATION') }}
