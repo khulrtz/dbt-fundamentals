@@ -1,1 +1,1 @@
-{{ mapeos_to_select('dbtfundamentals','STG_LINEITEM','dbtfundamentals','T_C1_LIK_LINEITEM') }}
+{{ mapeos_to_select('dbtfundamentals','STG_CALCULADO','dbtfundamentals','T_C1_LIK_LINEITEM') }}
