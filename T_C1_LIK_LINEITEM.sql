@@ -1,1 +1,0 @@
-{{ mapeos_to_select('ingestas','LINEITEM','dbtfundamentals','T_C1_LIK_LINEITEM') }}

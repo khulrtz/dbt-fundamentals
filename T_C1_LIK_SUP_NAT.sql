@@ -1,1 +1,0 @@
-{{ mapeos_to_select('ingestas','SUPPLIER','dbtfundamentals','T_C1_LIK_SUP_NAT') }}
