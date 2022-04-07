@@ -1,1 +1,1 @@
-{{ mapeos_to_select('dbtfundamentals','STG_LINEITEM','dbtfundamentals','T_C1_LIK_LINEITEM') }}
+{{    config(        unique_key=' ID_LINEITEM'    )}}{{ mapeos_to_select('ingestas','STG_STG_LINEITEM','dbtfundamentals','T_C1_LIK_LINEITEM') }}

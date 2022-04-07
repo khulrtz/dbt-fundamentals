@@ -1,1 +1,1 @@
-{{    config(        unique_key='ID'    )}}{{ mapeos_to_select('ingestas','STG_ORDERS','dbtfundamentals','T_C1_SAT_ORDERS') }}
+{{    config(        unique_key=' ID_ORDER'    )}}{{ mapeos_to_select('ingestas','STG_STG_ORDERS','dbtfundamentals','T_C1_SAT_ORDERS') }}

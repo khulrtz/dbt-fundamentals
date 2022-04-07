@@ -1,1 +1,1 @@
-{{ mapeos_to_select('dbtfundamentals','STG_NATION','dbtfundamentals','T_C1_SAT_NATION') }}
+{{    config(        unique_key=' ID_NATION'    )}}{{ mapeos_to_select('ingestas','STG_STG_NATION','dbtfundamentals','T_C1_SAT_NATION') }}
