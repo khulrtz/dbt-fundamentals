@@ -17,4 +17,4 @@ mapeos as (
     from {{ ref('metadata') }}
 )
 
-select * from mapeos where TB_ORIGEN IN ('CUSTOMER','ORDERS')
+select * from mapeos
