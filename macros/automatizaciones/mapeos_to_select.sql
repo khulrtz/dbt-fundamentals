@@ -98,6 +98,6 @@ SELECT
     {{ campo }}
 {% endfor -%}
 
-FROM  {{ ref('tb_orig') }}
+FROM  {{ ref(tb_orig) }}
 
 {%- endmacro -%}
