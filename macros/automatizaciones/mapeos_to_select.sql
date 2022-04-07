@@ -1,4 +1,4 @@
-{%- macro mapeos_to_select(table_name) -%}
+{%- macro mapeos_to_select(db_orig,tb_orig,db_dest,tb_dest) -%}
 
 {%- set config_query -%}
     select 
@@ -9,7 +9,7 @@
     MAX(decode(in_ts_scd,'S',CL_DESTINO,NULL)) COL_TS_SCD,
     MAX(decode(in_key,'S',CL_DESTINO,NULL)) COL_KEY_SCD
     from {{ ref('MTD_mapeos') }}
-    where TABLA_DESTINO = '{{ table_name }}'
+    where TABLA_DESTINO = '{{ tb_dest }}'
 {%- endset -%}
 
 {%- set config_results = run_query(config_query) -%}
@@ -45,7 +45,7 @@
     in_hash,
     in_trim
     from {{ ref('MTD_mapeos') }}
-    where TABLA_DESTINO = '{{ table_name }}'
+    where TABLA_DESTINO = '{{ tb_dest }}'
 {%- endset -%}
 
 {%- set results = run_query(values_query) -%}
@@ -98,11 +98,6 @@ SELECT
     {{ campo }}
 {% endfor -%}
 
-    {%- set source_relation = adapter.get_relation(
-      database=db_origen,
-      schema=db_origen,
-      identifier=tb_origen_B) -%}
-
-FROM  {{ source_relation }}
+FROM  {{ ref('tb_orig') }}
 
 {%- endmacro -%}
