@@ -1,1 +1,1 @@
-{{ mapeos_to_select('dbtfundamentals','STG_REGION','dbtfundamentals','T_C1_HUB_REGION') }} --> cambio
+{{ mapeos_to_select('dbtfundamentals','STG_REGION','dbtfundamentals','T_C1_HUB_REGION') }}
