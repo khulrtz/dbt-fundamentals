@@ -1,0 +1,11 @@
+
+WITH
+
+mapeos as (
+
+    select
+    *
+    from {{ ref('MTD_mapeos') }}
+)
+
+select DB_ORIGEN,'STG_' || TB_ORIGEN AS TB_ORIGEN,DB_DESTINO,TABLA_DESTINO,MAX(DECODE(IN_KEY,'S',CL_DESTINO,NULL)) AS INCR_KEY from mapeos where TB_ORIGEN <> 'CALCULADO' GROUP BY DB_ORIGEN,TB_ORIGEN,DB_DESTINO,TABLA_DESTINO
