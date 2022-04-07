@@ -40,7 +40,12 @@ models:
         +post-hook: "OPTIMIZE {{ this }}"
     marts:
       +materialized: table
-
+    capa_base:
+      incrementales:
+        +materialized: incremental
+        +file_format: delta
+        +incremental_strategy: 'merge'
+       
 dispatch:
   - macro_namespace: dbt_utils
     search_order: ['spark_utils', 'dbt_utils']
