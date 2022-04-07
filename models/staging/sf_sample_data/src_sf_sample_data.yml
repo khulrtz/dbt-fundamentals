@@ -17,3 +17,5 @@ sources:
         loaded_at_field: _etl_loaded_at
       - name: supplier
         loaded_at_field: _etl_loaded_at
+      - name: lineitem
+        loaded_at_field: _etl_loaded_at
