@@ -45,6 +45,7 @@ models:
         +materialized: incremental
         +file_format: delta
         +incremental_strategy: 'merge'
+        +pre_hook: ['SET spark.sql.shuffle.partitions=2']
        
 dispatch:
   - macro_namespace: dbt_utils
