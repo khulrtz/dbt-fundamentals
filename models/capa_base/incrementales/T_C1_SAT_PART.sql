@@ -1,1 +1,1 @@
-{{    config(        unique_key=' ID_PART'    )}}{{ mapeos_to_select('ingestas','STG_STG_PART','dbtfundamentals','T_C1_SAT_PART') }}
+{{    config(        unique_key=' ID_PART'    )}}{{ mapeos_to_select('ingestas','STG_PART','dbtfundamentals','T_C1_SAT_PART') }}

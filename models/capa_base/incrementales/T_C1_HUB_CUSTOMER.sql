@@ -1,1 +1,1 @@
-{{    config(        unique_key=' ID_CUSTOMER'    )}}{{ mapeos_to_select('ingestas','STG_STG_CUSTOMER','dbtfundamentals','T_C1_HUB_CUSTOMER') }}
+{{    config(        unique_key=' ID_CUSTOMER'    )}}{{ mapeos_to_select('ingestas','STG_CUSTOMER','dbtfundamentals','T_C1_HUB_CUSTOMER') }}

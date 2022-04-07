@@ -1,1 +1,1 @@
-{{    config(        unique_key=' ID_NAT_REG'    )}}{{ mapeos_to_select('ingestas','STG_STG_NATION','dbtfundamentals','T_C1_LIK_NAT_REG') }}
+{{    config(        unique_key=' ID_NAT_REG'    )}}{{ mapeos_to_select('ingestas','STG_NATION','dbtfundamentals','T_C1_LIK_NAT_REG') }}
