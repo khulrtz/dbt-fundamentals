@@ -46,7 +46,11 @@ models:
         +file_format: delta
         +incremental_strategy: 'merge'
         +pre_hook: ['SET spark.sql.shuffle.partitions=2']
-       
+seeds:
+  +database: ingestas
+  +schema: ingestas       
 dispatch:
   - macro_namespace: dbt_utils
     search_order: ['spark_utils', 'dbt_utils']
+  - macro_namespace: jaffle_shop
+    search_order: ['jaffle_shop', 'jaffle_shop']
