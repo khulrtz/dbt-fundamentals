@@ -1,4 +1,0 @@
-models:
-- name: MTD_incr_aux
-    scripts:
-        - "prueba.py"

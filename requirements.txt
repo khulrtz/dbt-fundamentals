@@ -1,5 +1,0 @@
-dbt
-pyyaml
-click
-pytest
-wordninja
